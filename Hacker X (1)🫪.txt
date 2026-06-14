@@ -1,18 +1,11 @@
--- Roblox Script
--- เล่นเสียงครั้งเดียว ไม่วน
-
+-- เล่นเพลง
 local sound = Instance.new("Sound")
-sound.SoundId = "rbxassetid://16190760285"
-sound.Volume = 1
-sound.Looped = false
-sound.Parent = workspace
+sound.SoundId = "rbxassetid://18655722475"
+sound.Volume = 5
+sound.Looped = true
+sound.Parent = game:GetService("SoundService")
 
 sound:Play()
-
--- ลบหลังเล่นจบ
-sound.Ended:Connect(function()
-	sound:Destroy()
-end)
 
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
 
